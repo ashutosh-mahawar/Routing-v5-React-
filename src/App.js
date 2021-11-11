@@ -3,6 +3,7 @@ import { BrowserRouter as Router,
          Switch,
          Route, 
          Link, 
+         NavLink,
          Redirect
         } from 'react-router-dom';
 
@@ -11,17 +12,19 @@ import Dashboard from './Component/Dashboard';
 import Home from './Component/Home';
 import NoMatchFound from './Component/NoMatchFound';
 
+import "./index.css"
+
 
 const App = () => {
   return (
     <Router>
       <div>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
+        <li>
+            <NavLink exact activeClassName="active" to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink exact activeClassName="active" to="/about">About</NavLink>
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>
